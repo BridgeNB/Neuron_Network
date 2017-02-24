@@ -37,7 +37,7 @@ def load_data():
     That's done in the wrapper function ``load_data_wrapper()``, see
     below.
     """
-    f = gzip.open('../data/mnist.pkl.gz', 'rb')
+    f = gzip.open('data/mnist.pkl.gz', 'rb')
     training_data, validation_data, test_data = cPickle.load(f)
     f.close()
     return (training_data, validation_data, test_data)
@@ -68,6 +68,10 @@ def load_data_wrapper():
     validation_data = zip(validation_inputs, va_d[1])
     test_inputs = [np.reshape(x, (784, 1)) for x in te_d[0]]
     test_data = zip(test_inputs, te_d[1])
+    ###
+    # print(training_inputs[0])
+    # print(training_results[0])
+    ###
     return (training_data, validation_data, test_data)
 
 def vectorized_result(j):
