@@ -52,7 +52,9 @@ mini-batches of size 100 for the training set.
 train.m implements the function that trains a neural net language model.
 To run the training, execute the following -
 
-> model = train(1);
+> 
+
+;
 
 This will train the model for one epoch (one pass through the training set).
 Currently, the training is not implemented and the cross entropy will not
